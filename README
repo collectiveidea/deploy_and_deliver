@@ -1,0 +1,30 @@
+Deploy and Deliver
+==================
+
+Capistrano recipes for Pivotal Tracker.
+
+
+To use this task, simply set the following variables:
+
+  set :pivotal_tracker_project_id, PROJECT_ID
+  set :pivotal_tracker_token, TOKEN
+
+Then, inside the task for your demo platform, add
+
+  task :demo do
+    ...
+    after :deploy, 'pivotal_tracker:deliver_stories'
+  end
+
+
+Bonus Output
+============
+
+
+As an added bonus, if you have Paul Dix's sax-machine gem installed (it's a SAX object parser that uses nokogiri), you'll even get a brief summary report of the delivered stories in your cap output.
+
+
+Credits
+=======
+
+Pluginized by Collective Idea (http://collectiveidea.com) based on code from Mike Dalessio, Pivotal Labs (http://pivotallabs.com/users/miked/blog/articles/702-deliver-tracker-stories-from-capistrano)

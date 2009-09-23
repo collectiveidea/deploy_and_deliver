@@ -17,6 +17,22 @@ Then, inside the task for your demo platform, add
   end
 
 
+Installation
+============
+
+Install as a plugin:
+
+  script/plugin install git://github.com/collectiveidea/deploy_and_deliver.git
+
+
+Install as a gem:
+
+  gem install collectiveidea-deploy_and_deliver --source http://gems.github.com
+
+  Add the following in your Capistrano config to load the recipes:
+
+    require 'deploy_and_deliver/recipes'
+
 Bonus Output
 ============
 
@@ -27,4 +43,4 @@ As an added bonus, if you have Paul Dix's sax-machine gem installed (it's a SAX 
 Credits
 =======
 
-Pluginized by Collective Idea (http://collectiveidea.com) based on code from Mike Dalessio, Pivotal Labs (http://pivotallabs.com/users/miked/blog/articles/702-deliver-tracker-stories-from-capistrano)
+Pluginized and Gemified by Collective Idea (http://collectiveidea.com) based on code from Mike Dalessio, Pivotal Labs (http://pivotallabs.com/users/miked/blog/articles/702-deliver-tracker-stories-from-capistrano)

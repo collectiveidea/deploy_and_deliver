@@ -8,7 +8,7 @@ begin
     gem.summary = %Q{Capistrano recipes for Pivotal Tracker}
     gem.description = %Q{Mark Pivotal Tracker stories as Delivered on deploy.}
     gem.email = "daniel@collectiveidea.com"
-    gem.homepage = "http://github.com/danielmorrison/deploy_and_deliver"
+    gem.homepage = "http://github.com/collectiveidea/deploy_and_deliver"
     gem.authors = ["Daniel Morrison"]
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end

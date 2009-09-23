@@ -16,14 +16,16 @@ Gem::Specification.new do |s|
     "README"
   ]
   s.files = [
-    "README",
+    ".gitignore",
+     "README",
      "Rakefile",
      "VERSION",
+     "deploy_and_deliver.gemspec",
      "install.rb",
      "lib/deploy_and_deliver/recipes.rb",
      "recipes/deploy_and_deliver.rb"
   ]
-  s.homepage = %q{http://github.com/danielmorrison/deploy_and_deliver}
+  s.homepage = %q{http://github.com/collectiveidea/deploy_and_deliver}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.5}

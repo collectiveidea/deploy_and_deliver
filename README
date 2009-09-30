@@ -8,6 +8,7 @@ To use this task, simply set the following variables:
 
   set :pivotal_tracker_project_id, PROJECT_ID
   set :pivotal_tracker_token, TOKEN
+  set :pivotal_tracker_ssl, false
 
 Then, inside the task for your demo platform, add
 

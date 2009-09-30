@@ -6,11 +6,12 @@ Capistrano::Configuration.instance.load do
       require 'rubygems'
       require 'activeresource'
 
-      class Story < ActiveResource::Base
-        self.site = "http://www.pivotaltracker.com/services/v2/projects/:project_id"
-      end
+      class Story < ActiveResource::Base ; end
 
+      protocol = self[:pivotal_tracker_ssl] ? 'https' : 'http'
+      Story.site = "#{protocol}://www.pivotaltracker.com/services/v2/projects/:project_id"
       Story.headers['X-TrackerToken'] = pivotal_tracker_token
+      
       puts "* delivering tracker stories ..."
       response = Story.put(:deliver_all_finished, :project_id => pivotal_tracker_project_id)
 

@@ -4,7 +4,7 @@ Capistrano::Configuration.instance.load do
     desc "deliver your project's 'finished' stories"
     task :deliver_stories do
       require 'rubygems'
-      require 'activeresource'
+      require 'active_resource'
 
       class Story < ActiveResource::Base ; end
 

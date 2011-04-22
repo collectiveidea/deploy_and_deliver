@@ -9,7 +9,7 @@ Capistrano::Configuration.instance.load do
       class Story < ActiveResource::Base ; end
 
       protocol = self[:pivotal_tracker_ssl] ? 'https' : 'http'
-      Story.site = "#{protocol}://www.pivotaltracker.com/services/v2/projects/:project_id"
+      Story.site = "#{protocol}://www.pivotaltracker.com/services/v3/projects/:project_id"
       Story.headers['X-TrackerToken'] = pivotal_tracker_token
       
       puts "* delivering tracker stories ..."

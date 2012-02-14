@@ -1,3 +1,4 @@
+require 'deploy_and_deliver'
 Capistrano::Configuration.instance.load do
   
   namespace :pivotal_tracker do

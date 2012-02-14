@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    deploy_and_deliver (2.1.0)
+    deploy_and_deliver (2.1.1)
       pivotal-tracker (~> 0.4.1)
 
 GEM

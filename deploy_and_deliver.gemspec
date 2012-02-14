@@ -14,11 +14,11 @@ Gem::Specification.new do |s|
     'MIT-LICENSE'
   ]
   s.files = Dir.glob("lib/**/*") + %w(MIT-LICENSE README)
-  s.homepage = %q{http://github.com/collectiveidea/deploy_and_deliver}
+  s.homepage = %q{https://github.com/collectiveidea/deploy_and_deliver}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{Capistrano recipes for Pivotal Tracker}
-  s.add_runtime_dependency     'pivotal-tracker', ">= 0.3.1"
+  s.add_runtime_dependency     'pivotal-tracker', "~> 0.4.1"
 end
 

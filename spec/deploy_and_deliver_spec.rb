@@ -35,6 +35,20 @@ describe "DeployAndDeliver::Project" do
       deliverer = DeployAndDeliver::Project.new(Configuration)
       deliverer.deliver_and_report.size.should == 1
     end
+
+    context "when a story has no estimate" do
+      let(:story_without_estimate) { PivotalTracker::Story.new(:story_type => 'feature', :estimate => nil) }
+      let(:story_with_estimate) { PivotalTracker::Story.new(:story_type => 'feature', :estimate => 4) }
+      let(:stories) { [story_with_estimate, story_without_estimate]}
+
+      it "ignores the story calculating total points", :vcr => {:cassette_name => 'deliver_and_report'} do
+        deliverer = DeployAndDeliver::Project.new(Configuration)
+        deliverer.stub(:stories).and_return(stories)
+        stories.each { |story| story.stub(:update) }
+
+        deliverer.deliver_and_report.size.should == 2
+      end
+    end
   end
 end
 

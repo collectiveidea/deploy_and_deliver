@@ -13,7 +13,7 @@ module DeployAndDeliver
     def deliver_and_report
       stories.each{|story| story.update :current_state => 'delivered'}
 
-      estimates = stories.map(&:estimate).reject(&:nil?)
+      estimates = stories.map(&:estimate).compact
       puts "* delivered #{stories.size} stories (#{estimates.inject(:+)} points)"
       stories.each do |story|
         puts "  - #{story.story_type.capitalize}: #{story.name} (#{story.estimate} #{story.estimate == 1 ? "point" : "points"})"

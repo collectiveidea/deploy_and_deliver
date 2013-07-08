@@ -2,8 +2,8 @@ require 'deploy_and_deliver'
 require 'vcr'
 
 Configuration = {
-  :pivotal_tracker_token      => ENV['PIVOTAL_TRACKER_TOKEN'],
-  :pivotal_tracker_project_id => ENV['PIVOTAL_TRACKER_PROJECT_ID']
+  :pivotal_tracker_token      => ENV['PIVOTAL_TRACKER_TOKEN'] || '<TOKEN>',
+  :pivotal_tracker_project_id => ENV['PIVOTAL_TRACKER_PROJECT_ID'] || '477915'
 }
 
 VCR.configure do |c|

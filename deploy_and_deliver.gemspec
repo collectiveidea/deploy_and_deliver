@@ -19,6 +19,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.6}
   s.summary = %q{Capistrano recipes for Pivotal Tracker}
-  s.add_runtime_dependency     'pivotal-tracker', "~> 0.4.1"
+  s.add_runtime_dependency     'pivotal-tracker', "~> 0.5.9"
 end
 
